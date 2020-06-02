@@ -1,0 +1,47 @@
+/* stuff to use custom font */
+@font-face {
+    font-family: 'pkmn_rbygscregular';
+    src: url('../fonts/pkmn_rbygsc-webfont.woff2') format('woff2'),
+         url('../fonts/pkmn_rbygsc-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url('../images/grass.png'); /* repeating tile as background */
+    /*padding: 7%;
+    padding-top: 5%; /* different top padding for navbar space */
+}
+
+#dex {
+    margin-top: 2em;
+    max-width: 95%;
+}
+
+.square {
+    min-width: 9.8em;
+    max-height: auto;
+    padding: 0.9em;
+    margin: 0.18em;
+    background-color: rgba(100, 8, 8, 0.171);
+}
+
+.square p, nav {
+    font-family: 'pkmn_rbygscregular';
+    padding: 0px;
+    margin: 0px;
+}
+
+/* highlights when hovering */
+.square:hover {
+    background-color: rgba(31, 16, 112, 0.171);
+}
+
+/* stuff to make text and images undraggable */
+img, p, nav {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
