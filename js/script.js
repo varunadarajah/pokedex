@@ -89,7 +89,7 @@ async function pokeSearch() {
         var dexNum = convertId(i);
 
         // if any segment of the input matches a name or dex number, it will display the corresponding pokemon
-        if(dexNum.indexOf(input) > - 1 || pokeList.results[i-1].name.indexOf(input) > -1) {
+        if(dexNum.indexOf(input) > -1 || pokeList.results[i - 1].name.indexOf(input) > -1) {
             pkmn.style.display = "";
         } else {
             pkmn.style.display = "none";
