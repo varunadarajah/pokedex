@@ -8,7 +8,8 @@
 }
 
 body {
-    background-image: url('../images/grass.png'); /* repeating tile as background */
+    /* repeating tile as background */
+    background-image: url('../images/grass.png'); 
 }
 
 #dex {
@@ -39,6 +40,7 @@ body {
 #pkmnModal p {
     font-family: 'pkmn_rbygscregular';
     font-size: medium;
+    padding-top: 0.8em;
 }
 
 /* pokemon name */

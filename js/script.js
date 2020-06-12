@@ -1,4 +1,4 @@
-var pokedexLimit = 151;
+var pokedexLimit = 251;
 const P = new Pokedex.Pokedex(); 
 
 // populates dex container with pokemon
@@ -25,7 +25,7 @@ function loadDexGrid() {
 }
 
 // loads modal with information from selected pokemon, and opens modal
-// retrieves info from https://pokeapi.co/
+// retrieves info from https://pokeapi.co/, icon from serebii.net and animated sprite from pokemondb.net
 async function loadModal(dexNum) {
     var pkmn;
 
@@ -43,14 +43,15 @@ async function loadModal(dexNum) {
             <div class="modal-content">
                  <div class="modal-header">
                     <img src="https://www.serebii.net/pokedex-dp/icon/` + dexNum + `.gif">
-                    <h5 class="modal-title">` + pkmn.name.charAt(0).toUpperCase() + pkmn.name.slice(1) + `</h5>
+                    <h5 class="modal-title">` + pkmn.name.toUpperCase() + `</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <img src="https://www.serebii.net/blackwhite/pokemon/` + dexNum + `.png" class="">
-                    <p>` + pkmn.flavor_text_entries[13].flavor_text + `</p> 
+                    <img src="https://img.pokemondb.net/sprites/black-white/anim/normal/` + pkmn.name + `.gif">
+                    <p style="display: inline; padding-left: 0.8em;"> ` + pkmn.genera[7].genus + `</p> 
+                    <p>` + pkmn.flavor_text_entries[11].flavor_text + `</p> 
                 </div>
             </div>
         </div>    
@@ -79,7 +80,6 @@ async function pokeSearch() {
     // grabs an array of pokemon names and their numbers
     try {
         pokeList = await P.getPokemonsList({limit: pokedexLimit, offset: 0});
-        console.log(pokeList);
     } catch(e) { 
         return;
     }
