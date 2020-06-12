@@ -9,8 +9,6 @@
 
 body {
     background-image: url('../images/grass.png'); /* repeating tile as background */
-    /*padding: 7%;
-    padding-top: 5%; /* different top padding for navbar space */
 }
 
 #dex {
@@ -35,6 +33,19 @@ body {
 /* highlights when hovering */
 .square:hover {
     background-color: rgba(31, 16, 112, 0.171);
+}
+
+/* pokemon description */
+#pkmnModal p {
+    font-family: 'pkmn_rbygscregular';
+    font-size: medium;
+}
+
+/* pokemon name */
+#pkmnModal h5 {
+    font-family: 'pkmn_rbygscregular';
+    padding-left: 0.5em;
+    padding-top: 0.28em;
 }
 
 /* stuff to make text and images undraggable */
