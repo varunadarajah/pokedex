@@ -1,7 +1,7 @@
 # pokedex
 Pokedex site made using Bootstrap & Javascript
 
-Live site:https://varunadarajah.github.io/pokedex/
+Live site: https://varunadarajah.github.io/pokedex/
 
 ## Data sources
 Pokemon information (name, desc, etc) - https://pokeapi.co/
